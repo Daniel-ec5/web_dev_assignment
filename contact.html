@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Daniel</title>
+    <link rel="stylesheet" href="reset.css" />
+
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <li><a href="index.html" id="logo">Daniel.EC</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects" target="_blank">Projects</a></li>
+        <li><a href="about.html" target="_blank">About</a></li>
+        <li><a href="skills.html" target="_blank">Skills and Experience</a></li>
+        <li><a href="education.html" target="_blank">Education</a></li>
+        <li>
+          <a href="contact.html" target="_blank">Contact me</a>
+        </li>
+      </nav>
+    </header>
+    <form action="process.php" method="POST">
+      <legend>Contact me</legend>
+      <fieldset>
+        <div>
+          <label for="name">Your Name</label>
+          <br />
+          <input type="text" id="name" placeholder="Enter your name" / required>
+        </div>
+        <div>
+          <label for="email"> Your Email </label>
+          <br />
+          <input type="email" id="email" placeholder="jane@gmail.com" /
+          required>
+        </div>
+        <div id="msg">
+          <label for="message">Your Message</label>
+          <br />
+          <textarea
+            cols="80"
+            rows="5"
+            placeholder="Enter your text here..."
+            id="message"
+            required
+          ></textarea>
+        </div>
+
+        <button>Send Message</button>
+        <button>Clear</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

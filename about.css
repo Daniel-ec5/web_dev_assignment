@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Flavors&family=Funnel+Display:wght@300..800&family=Mogra&display=swap');@import url('https://fonts.googleapis.com/css2?family=Borel&family=Flavors&family=Mogra&display=swap');/*for the fonts*/
+:root{
+    --back:#1C1C1E;
+    --aside:#a0622c;/* for aside in grid layout*/
+    --main:#a37837;
+    --hover:#FDCB6E;
+    --text:#E5E5E7;
+    --accent:#03DAC6;
+    --text2:#A1A1AA;
+    --hover:#d1ba8f;
+    --shadow:#000000;
+}
+body {
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: "Funnel", sans-serif;
+    background-color: var(--back);
+    color:var(--text);
+    padding:1rem;
+    
+}
+a{
+    text-decoration: none;
+    color:var(--text);
+}
+
+nav{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content: space-evenly;
+    background-color:var(--main);
+    max-height:100%;/*making sure it doesnt overflow*/
+    max-width:100%;
+    margin-top: 1rem;
+    position: relative;
+
+}
+li{
+    list-style-type:none;
+    padding-left:.5rem;
+    padding-top: .5rem;
+    margin-top: 1rem;
+    
+}
+nav li a{
+    color:var(--text);
+    text-decoration: none;
+}
+#logo{
+    color:black;
+    font-family: "Borel", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size:2rem;
+    padding-left:0rem ;
+    padding-top:.2rem;
+    
+}
+a:hover{
+    color:var(--hover);
+}
+div{
+    margin:1rem;
+    position: relative;
+    border: .1rem solid var(--main);
+    font-size: 100% ;
+}
+.container{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr,1fr;
+    gap: .5rem .5rem;
+    background-color: var(--back);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 .5rem .2rem var(--shadow);
+}
+h2{
+    font-family: "Funnel", cursive;
+    font-size: 100%;
+    color:var(--text);
+    border-radius: .5rem;
+    text-align: center;
+    background-color: var(--main);
+}
+p{
+    padding:1rem;
+    word-spacing: .2rem;
+    line-height: 1.5;
+}
+i{
+    font-size:1rem;
+}
+.about{
+    grid-column: span 3;
+    grid-row: span 1;
+}
+.social{
+    grid-column: span 1;
+    grid-row: span .4;
+}
+.hobbies{
+    grid-column: span 1;
+    grid-row: span .6;
+}
+li{
+    padding:.5rem;
+}
+.research{
+    grid-row: span 1;
+    grid-column: span 1;
+}
+figure{
+    width:40%;
+    margin:2 rem;
+    float:right;
+    
+}
+figcaption{
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+}
+img{
+    
+    max-width:80%;
+    padding:1rem;
+    border-radius: .8rem;
+}
+button{
+    background-color: var(--main);
+    color:var(--text);
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: 1.4rem;
+    margin: 1.5rem;
+}
+footer{
+    font-size:.7rem;
+}
