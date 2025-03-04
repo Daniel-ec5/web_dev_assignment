@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Ewelike's Blog</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Login</h1>
+    </header>
+
+    <form>
+      <fieldset>
+        <section>
+          <label for="username">Enter Username</label>
+          <br />
+          <input type="text" placeholder="Username" pattern="Daniel"
+          oninvalid="this.setCustomValidity('Invalid Username')"
+          //sets_the_error_message oninput="this.setCustomValidity('')"
+          //this_resets_the_error_message required />
+          <br />
+        </section>
+        <section>
+          <label for="password">Enter Password</label>
+          <br />
+          <input
+            type="password"
+            placeholder="Password"
+            pattern="Danny3000"
+            oninvalid="this.setCustomValidity('Invalid Password')"
+            oninput="this.setCustomValidity('')"
+            required
+          />
+        </section>
+        <section class="buttons">
+          <button type="submit">Login</button>
+          <button type="reset">Reset password</button>
+          <footer style="font-size: 12pt">
+            &copy; 2021 Daniel Ewelike's Blog
+          </footer>
+        </section>
+      </fieldset>
+    </form>
+  </body>
+</html>

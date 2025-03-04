@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Flavors&family=Funnel+Display:wght@300..800&family=Mogra&display=swap');/*for the fonts*/
+
+form{
+    
+    margin: 1em;
+    padding: 1em; 
+    justify-items: center;  
+
+}
+fieldset{
+    display: grid;
+    width:40%;
+    height:20em;
+    text-align: center;
+    border-radius: 1em;
+    margin: .5em;
+}
+body{
+    font-size:1.5em;
+    font-family:"Funnel",sans-serif;
+}
+input{
+    margin:.5em;
+    border-radius: .5em;
+    width:80%;
+    height:3em;
+}
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #a0622c;
+    border-radius:.5em ;
+    width:25em;
+    height:4em;
+    margin:1.5em;
+    padding:.4em;
+}
+header{
+    margin-top:.5em;
+    text-align: center;
+    font-size: 2em;
+    font-family:"mogra",sans-serif ;
+}
+
+button{
+    font-size: 1em;
+    border-radius: .5em;
+    margin-left: 1.5em;
+    cursor: pointer;
+}

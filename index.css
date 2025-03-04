@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Flavors&family=Funnel+Display:wght@300..800&family=Mogra&display=swap');@import url('https://fonts.googleapis.com/css2?family=Borel&family=Flavors&family=Mogra&display=swap');/*for the fonts*/
+:root{
+    --back:#1C1C1E;
+    --aside:#a0622c;/* for aside in grid layout*/
+    --main:#a37837;
+    --hover:#FDCB6E;
+    --text:#E5E5E7;
+    --accent:#03DAC6;
+    --text2:#A1A1AA;
+    --hover:#d1ba8f;
+    --shadow:#000000;
+}
+body {
+    font-size: 1.5rem;
+    font-family: "Funnel", sans-serif;
+    background-color: var(--back);
+    background-image: url('code-solid.svg');
+    background-repeat: no-repeat; /* Prevents repetition */
+    background-size:40rem; /* Scales the image to cover the screen */
+    background-position: top;
+    color:var(--text);
+    
+}
+a{
+    text-decoration: none;
+    color:var(--text);
+}
+
+nav{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content: space-evenly;
+    background-color:var(--main);
+    max-height:100%;/*making sure it doesnt overflow*/
+    max-width:100%;
+    margin-top: 1rem;
+    position: relative;
+
+}
+li{
+    list-style-type:none;
+    padding-left:.5rem;
+    padding-top: .5rem;
+    margin-top: 1rem;
+    
+}
+nav li a{
+    color:var(--text);
+    text-decoration: none;
+}
+#logo{
+    color:black;
+    font-family: "Borel", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size:2rem;
+    padding-left:0rem ;
+    padding-top:.2rem;
+    
+}
+a:hover{
+    color:var(--hover);
+}
+a:visited{
+    color:black;
+}
+.main{
+    display:block; /* making it block makes sure its not being overlapped when zoomed */
+    position: relative;
+    font-size: 2rem;
+    font-family: "Mogra", serif;
+    text-align: center;
+    margin-top: 3rem;
+}
+p{
+    margin:1rem;
+    display:block;
+    font-size: 2.5rem;
+}
+.btn{
+    margin-top: 3rem;
+    text-align: center;
+}
+button{
+    background-color: var(--main);
+    color: var(--text);
+    border: none;
+    padding: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    max-width: 10rem;
+    max-height: 4rem;
+    border-radius: 1rem;
+}
+.social{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+    height:2rem;
+    margin-top: 2rem;
+}
+img{
+    max-width: 2rem;
+    height: 2rem;
+    opacity:.7;
+    
+}
+footer p{
+    font-size: 1rem;
+    margin-top:7rem;
+}
+
