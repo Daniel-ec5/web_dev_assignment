@@ -54,6 +54,7 @@ a:visited{
 }
 body{
     font-family: "Mogra", serif;
+    background-color: var(--back);
 }
 form{
     margin:2em;
@@ -68,9 +69,6 @@ legend{
 
 }
 
-body{
-    background-color: var(--back);
-}
 fieldset{
     width:60%;
     margin:3em;
