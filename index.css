@@ -37,9 +37,21 @@ li{
     margin-top: 1rem;
     
 }
+
+a:hover{
+    color:var(--hover);
+    transform:scale(1.5);
+    transition: all .3s ease-in-out;
+}
 nav li a{
     color:var(--text);
     text-decoration: none;
+    
+}
+nav li:hover{
+    color:var(--hover);
+    transform:scale(1.5);
+    transition: all .3s ease-in-out;
 }
 #logo{
     color:black;
@@ -51,82 +63,83 @@ nav li a{
     padding-top:.2rem;
     
 }
-a:hover{
-    color:var(--hover);
-}
-a:visited{
-    color:black;
-}
 div{
     margin-top: 1rem;
 }
+body{
+    font-family: "Mogra", sans-serif;
+}
 /* index css*/
-.index .main {
+#index .main {
     background-color: var(--back);
     color:var(--text2);
-    background-image: url('images/background.jpg');
+    background-image: url('images/image5.jpg');
     background-repeat: no-repeat; /* Prevents repetition */
     background-size:cover; /* Scales the image to cover the screen */
     background-position:center;
-    opacity: 5;
-    height:100vh;
     max-width: 100vw;
+    max-height: 100vh;
     
 }
-.index .main{
+#index .main{
     display: grid;
     grid-template-columns: repeat(10,1fr);
     grid-template-rows: repeat(10,1fr);
     gap: 0 1rem;
+    max-width: 100vw;
     justify-content: space-evenly;
-    font-family: "Mogra", serif;
     text-align: center;
-    margin-top: 1rem;    
+    margin-top: .7rem;
 }
-.index .aside2{
-    grid-column: span 3;
-    grid-row: span 6;
-}
-.index .aside2 figure{
+#index .aside2 figure{
     width: 100%;
     height: 100%;
     margin:1rem;
 }
-.index img{
+#index img{
     width: 100%;
     height: 100%;
     border-radius: 2rem;
     opacity: .6;
 }
-.index .text{
-    grid-column: span 7;
+#index .text{
+    grid-column: span 10;
     grid-row: span 6;
-    padding: 6rem 0 2rem 0 ;
+    padding: 3rem 0 2rem 0 ;
 }
 
-.index  .text p{
+#index  .text p{
     margin:1rem;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
-.index .btn{
+#index .btn{
     padding: 1rem;
     grid-column: span 10;
     grid-row: span 1;
     justify-items: center;
     
 }
-.index button{
-    background-color: var(--main);
-    color: var(--text);
+#index .btn  a:hover{
+    color: black;
+}
+ button{
+    background-color: rgb(40, 39, 39);
+    color: white;
     border: none;
     padding: .5rem;
-    font-size: 1.5rem;
+    font-size: 100%;
     cursor: pointer;
-    width:20%;
-    height:auto;
+    width:30%;
+    height:90%;
     border-radius: 1rem;
+    transition: all .3s ease-in-out;
 }
-.index .social{
+ button:hover{
+    transform: scale(1.4);
+    background-color: var(--hover);
+    
+}
+#index .social{
     grid-column: span 10;
     grid-row: span 1;
     display: flex;
@@ -135,12 +148,12 @@ div{
     
     
 }
-.index .social img{
+#index .social img{
     max-width: 2rem;
     height: 2rem;
     opacity:.7;  
 }
-.index footer{
+#index footer{
     grid-column: span 10;
     padding-top:2rem;
 }
@@ -149,3 +162,122 @@ footer p{
     font-size: 1rem;
 }
 
+/*Login page*/
+
+#login form{
+    padding: 1em; 
+    width:95vw;
+    height:100vh;
+    margin: 1rem auto;
+    background-image: url(images/login.jpg);
+    background-repeat: no-repeat; /* Prevents repetition */
+    background-size:cover; /* Scales the image to cover the screen */
+
+}
+#login h2{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text2);
+}
+#login fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:30%;
+    height:40%;
+    text-align: center;
+    justify-content: space-evenly;
+    border-radius: 1em;
+    margin: 4em auto;
+    border:#000000 solid .3em;
+    color:var(--text2);
+}
+#login fieldset:hover{
+    background-color: var(--hover);
+    transform: scale(1.5);
+    transition: all .5s ease-in-out;
+    color:black;
+
+}
+#login input{
+    padding: .5em;
+    margin: .5em;
+    border-radius: .5em;
+    border: none;
+    background-color: var(--back);
+    color: var(--text2);
+}
+#login footer{
+    margin-top: 4rem;
+    text-align: center;
+    font-size: .7rem;
+
+}
+/*add blog page*/
+#addblog form{
+    padding: 1em; 
+    width:100vw;
+    height:100vh;
+    margin: 1rem auto;
+    background-image: url(images/login.jpg);
+    background-repeat: no-repeat; /* Prevents repetition */
+    background-size:cover; /* Scales the image to cover the screen */
+
+}
+#addblog fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:50%;
+    height:60%;
+    text-align: center;
+    justify-content: space-evenly;
+    border-radius: 1em;
+    margin: 2em auto;
+    border:#000000 solid .3em;
+    color:var(--text2);
+    padding:1rem;
+}
+#addblog section{
+    margin-bottom: 1rem;
+}
+#addblog input, #addblog textarea{
+    padding: .5em;
+    margin: .5em;
+    border-radius: .5em;
+    border: none;
+    width:60%;
+    background-color: var(--back);
+    color: var(--text2);
+}
+#addblog input:hover, #addblog textarea:hover{
+    transform: scale(1.5);
+    transition: all .5s ease-in-out;
+}
+#addblog label{
+    margin: 1rem;
+}
+#addblog h2{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text2);
+}
+#addblog .button{
+    font-size: 100%;
+    margin-top:1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+#addblog footer{
+    margin-top: 6rem;
+    text-align: center;
+    font-size: .5rem;
+
+}
+#addblog button:hover{
+    transform: scale(1.2);
+    transition: all .5s ease-in-out;
+}

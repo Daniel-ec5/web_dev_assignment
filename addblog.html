@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add blog</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body id="addblog">
+    <header>
+      <nav>
+        <li><a href="index.html" id="logo">Daniel.EC</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects" target="_blank">Projects</a></li>
+        <li><a href="about.html" target="_blank">About me</a></li>
+        <li><a href="skills.html" target="_blank">Skills and Experience</a></li>
+        <li><a href="education.html" target="_blank">Education</a></li>
+        <li>
+          <a href="contact.html" target="_blank">Contact me</a>
+        </li>
+      </nav>
+    </header>
+        <form >
+        <h2>Add Blog</h2>
+        <fieldset class="main">
+          <section>
+            <label for="title">Enter Title</label>
+            <br />
+            <input type="text" placeholder="Title" required />
+            <br />
+          </section>
+          <section>
+            <label for="content">Enter Content</label>
+            <br />
+            <textarea
+              name="content"
+              id="content"
+              cols="30"
+              rows="6"
+              placeholder="Content"
+              required
+            ></textarea>
+          </section>
+          <section class="button">
+            <button type="submit">Add Blog</button>
+            <button type="reset">Clear</button>
+          </section>
+        </form> 
+    <footer>
+      <p>&copy; 2025 Daniel.EC</p>
+  </body>
+</html>

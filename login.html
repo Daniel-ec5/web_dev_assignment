@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daniel Ewelike's Blog</title>
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
+  <body id="login">
     <header>
-      <h1>Login</h1>
+      <nav>
+        <li><a href="index.html" id="logo">Daniel.EC</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects" target="_blank">Projects</a></li>
+        <li><a href="about.html" target="_blank">About me</a></li>
+        <li><a href="skills.html" target="_blank">Skills and Experience</a></li>
+        <li><a href="education.html" target="_blank">Education</a></li>
+        <li>
+          <a href="contact.html" target="_blank">Contact me</a>
+        </li>
+      </nav>
     </header>
-
-    <form>
-      <fieldset>
+    <form action="addblog.html" method="GET">
+      <h2>Login to Admin</h2>
+      <fieldset class="main">
         <section>
           <label for="username">Enter Username</label>
           <br />
@@ -35,14 +45,11 @@
             required
           />
         </section>
-        <section class="buttons">
+        <section class="button">
           <button type="submit">Login</button>
-          <button type="reset">Reset password</button>
-          <footer style="font-size: 12pt">
-            &copy; 2021 Daniel Ewelike's Blog
-          </footer>
         </section>
       </fieldset>
+      <footer>&copy; 2025 Daniel Ewelike's Blog</footer>
     </form>
   </body>
 </html>
