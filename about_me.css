@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Flavors&family=Funnel+Display:wght@300..800&family=Mogra&display=swap');@import url('https://fonts.googleapis.com/css2?family=Borel&family=Flavors&family=Mogra&display=swap');/*for the fonts*/
+:root{
+    --back:#1C1C1E;
+    --aside:#a0622c;/* for aside in grid layout*/
+    --main:#a37837;
+    --hover:#FDCB6E;
+    --text:#E5E5E7;
+    --accent:#03DAC6;
+    --text2:#A1A1AA;
+    --hover:#d1ba8f;
+    --shadow:#000000;
+}
+body {
+
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family: "Funnel", sans-serif;
+    background-color: var(--text);
+    color:var(--text);
+    
+}
+li{
+    list-style-type:none;
+    margin: .5rem;
+    margin-top: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color:var(--text);
+}
+nav li a{
+    color:var(--text);
+    text-decoration: none;
+}
+#logo{
+    color:black;
+    font-family: "Borel", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size:2rem;
+    padding-left:0rem ;
+    padding-top:.2rem;
+    
+}
+a:hover{
+    color:var(--hover);
+}
+.container{
+    max-width:98vw;
+    display:grid;
+    height: auto;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows:repeat(10,fr);
+    gap: 1rem;
+    background-color: var(--back);
+    padding: .3rem;
+    border-radius: .7rem;
+}
+
+nav{
+    grid-column: span 10;
+    grid-row: 1;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content: space-evenly;
+    background-color:var(--main);
+    max-height:100%;/*making sure it doesnt overflow*/
+    max-width:100%;
+    margin-top: 1rem;
+
+}
+
+
+div{
+    border: .1rem solid var(--main);
+    border-radius: 1rem;
+}
+
+h2{
+    font-family: "Funnel", cursive;
+    font-size: 100%;
+    font-weight: bold;
+    color:var(--text);
+    border-radius: .5rem;
+    text-align: center;
+    background-color: var(--main);
+    margin: .3rem;
+}
+p{
+    padding:1rem;
+    word-spacing: .2rem;
+    line-height: 1.5;
+
+}
+i{
+    font-size:1rem;
+}
+
+
+/*ABOUT PAGE*/
+
+
+#about-me .about {
+    grid-column: span 8;
+    grid-row: span 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#about-me .skills {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+#about-me .social {
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+#about-me .hobbies {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+#about-me li {
+    padding: 0.5rem;
+}
+
+#about-me .research {
+    grid-row: span 5;
+    grid-column: span 2;
+}
+
+#about-me .research a:hover {
+    background-color: var(--text2);
+    border-radius: 0.5rem;
+}
+
+#about-me figure {
+    float: right; /* Moves IT to the right, allowing text to wrap around it */
+    margin: .5rem; 
+    padding: 1rem;
+    text-align: center;
+    width: 40%; /* Ensures figure doesn’t take up too much space */
+}
+
+
+#about-me article p {
+    padding: 0.5rem;
+}
+
+#about-me figcaption {
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+    color: var(--main);
+}
+
+#about-me img {
+    max-width: 90%; /* Almost covers the figure space */
+    margin: 0 auto; /* Center the image within the figure */
+    border-radius: 20%;
+}
+
+#about-me .education {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+#about-me .orgs {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+#about-me button {
+    background-color: var(--main);
+    color: var(--text);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    margin: 1.5rem;
+    width: 80%;
+}
+
+#about-me footer {
+    grid-row: span 2;
+    grid-column: span 10;
+    font-size: 0.7rem;
+}
