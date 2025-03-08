@@ -145,8 +145,6 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
-    
 }
 #index .social img{
     max-width: 2rem;
