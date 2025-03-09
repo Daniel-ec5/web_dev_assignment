@@ -53,6 +53,29 @@ nav li:hover{
     padding-top:.2rem;
     
 }
+
+@keyframes logoA{
+    0%{
+        transform:scale(1) rotate(0deg);
+        color:var(--main);
+        text-shadow: 0 0 .5rem var(--main);
+
+    }
+    50%{
+        transform:scale(1.1) rotate(5deg);
+        color:var(--hover);
+        text-shadow: 0 0 1rem var(--hover);
+    }
+    100%{
+        transform:scale(1) rotate(0deg);
+        color:black;
+        text-shadow: 0 0 .5rem black;
+    }
+
+}
+#logo:hover{
+    animation: logoA .8s ease-in-out infinite;
+}
 .container{
     max-width:98vw;
     display:grid;

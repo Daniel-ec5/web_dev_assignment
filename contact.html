@@ -3,28 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Daniel</title>
+    <title>Message Daniel</title>
     <link rel="stylesheet" href="reset.css" />
-
-    <link rel="stylesheet" href="about-me.css" />
+    <link rel="stylesheet" href="index.css" />
   </head>
-  <body id="addblog">
+  <body id="addblog"><!--Same format as Add blog page with little changes-->>
     <header>
       <nav>
         <li><a href="index.html" id="logo">Daniel.EC</a></li>
         <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="login.html">Blog</a></li>
         <li><a href="about.html">About me</a></li>
         <li><a href="skills.html">Skills and Experience</a></li>
       </nav>
     </header>
         <form >
-        <h2>Add Blog</h2>
+        <h2>Send Message</h2>
         <fieldset class="main">
           <section>
-            <label for="name">Your Name</label>
+            <label for="title">Your Name</label>
             <br />
-            <input type="text" placeholder="name" required />
+            <input type="text" placeholder="Your Name" required />
             <br />
           </section>
           <section>
@@ -35,16 +34,31 @@
               id="content"
               cols="30"
               rows="6"
-              placeholder="Content"
+              placeholder="Message"
               required
             ></textarea>
           </section>
           <section class="button">
-            <button type="submit">Send Msg</button>
+            <button type="submit">Send</button>
             <button type="reset">Clear</button>
           </section>
-        </form> 
+        </form>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/danielewelikechimezie"
+            ><img src="/images/ln.webp" alt="linkedin"
+          /></a>
+          <a href="https://github.com/Daniel-ec5"
+            ><img src="/images/github-128.webp" alt="github"
+          /></a>
+          <a href="mailto:Daniel.ec5@Outlook.com?subject=Portfolio%20Contact"
+            ><img src="/images/mail.webp" alt="mail"
+          /></a>
+          <a href="https://snapchat.com/add/daniel_el22"
+            ><img src="/images/spo.webp" alt="snapchat"
+          /></a>
+        </div>
     <footer>
       <p>&copy; 2025 Daniel.EC</p>
+    </footer>
   </body>
 </html>

@@ -17,14 +17,13 @@ a{
     text-decoration: none;
     color:var(--text);
 }
-
 nav{
     display:flex;
     flex-wrap: wrap;
     flex-direction:row;
     justify-content: space-evenly;
     background-color:var(--main);
-    max-height:100%;/*making sure it doesnt overflow*/
+    max-height:100%;
     width:100vw;
     margin: 1rem,0rem,1rem,0rem;
     font-family: "Mogra", sans-serif;
@@ -62,6 +61,28 @@ nav li:hover{
     padding-top:.2rem;
     float:left;
     
+}
+@keyframes logoA{
+    0%{
+        transform:scale(1) rotate(0deg);
+        color:var(--main);
+        text-shadow: 0 0 .5rem var(--main);
+
+    }
+    50%{
+        transform:scale(1.1) rotate(5deg);
+        color:var(--hover);
+        text-shadow: 0 0 1rem var(--hover);
+    }
+    100%{
+        transform:scale(1) rotate(0deg);
+        color:black;
+        text-shadow: 0 0 .5rem black;
+    }
+
+}
+#logo:hover{
+    animation: logoA .8s ease-in-out infinite;
 }
 div{
     margin-top: 1rem;
@@ -138,12 +159,13 @@ div{
     cursor: pointer;
     width:30%;
     height:60%;
+    margin:1rem;
     border-radius: 1rem;
     transition: all .3s ease-in-out;
     margin-top: 3rem;
 }
  button:hover{
-    transform: scale(1.4);
+    transform: scale(1.3);
     background-color: var(--hover);
     
 }
@@ -215,7 +237,6 @@ footer p{
     transform: scale(1.2);
     height:15rem;
     width:10rem;
-
     color: var(--shadow);
 }
  .container h2{
@@ -261,7 +282,7 @@ footer p{
 #login form{
     padding: 1em; 
     width:95vw;
-    height:100vh;
+    height:100%;
     margin: 1rem auto;
     background-image: url(images/login.jpg);
     background-repeat: no-repeat; /* Prevents repetition */
@@ -272,13 +293,15 @@ footer p{
     text-align: center;
     font-size: 2rem;
     color: var(--text2);
+    filter:contrast(1.5);
+    margin-top: 1rem;
 }
 #login fieldset{
     display: flex;
     flex-direction: column;
     justify-content: center;
     width:30%;
-    height:40%;
+    height:20%;
     text-align: center;
     justify-content: space-evenly;
     border-radius: 1em;
@@ -286,13 +309,22 @@ footer p{
     border:#000000 solid .3em;
     color:var(--text2);
 }
-#login fieldset:hover{
+fieldset:hover{
     background-color: var(--hover);
-    transform: scale(1.5);
+    transform: scale(1.4,1.6);
     transition: all .5s ease-in-out;
-    color:black;
-
+    label{/* tried and it worked, didnt know i could nest styles*/
+        color:#000000;
+    }
 }
+#login section{
+    margin-bottom: 1rem;
+}
+#login button{
+    width:60%;
+    margin:.5rem;
+}
+
 #login input{
     padding: .5em;
     margin: .5em;
@@ -302,15 +334,26 @@ footer p{
     color: var(--text2);
 }
 #login footer{
-    margin-top: 4rem;
+    display: block;
+    padding: 1rem;
+    margin-top: 2rem;
     text-align: center;
     font-size: .7rem;
+    color:white;
 
 }
 /*add blog page*/
 #addblog form{
     padding: 1em;
     width:100vw;
+}
+#addblog fieldset:hover{
+    background-color: var(--hover);
+    transform: scale(1.2);
+    transition: all .5s ease-in-out;
+    color:black;
+}
+#addblog {
     height:100vh;
     margin: 1rem auto;
     background-image: url(images/login.jpg);
@@ -321,12 +364,13 @@ footer p{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width:50%;
-    height:60%;
+    width:30%;
+    height:40%;
     text-align: center;
     justify-content: space-evenly;
     border-radius: 1em;
-    margin: 2em auto;
+    align-items: center;
+    margin: 4rem auto;
     border:#000000 solid .3em;
     color:var(--text2);
     padding:1rem;
@@ -361,16 +405,28 @@ footer p{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
 }
 
 #addblog footer{
-    margin-top: 6rem;
+    margin-top: 4rem;
     text-align: center;
     font-size: .5rem;
-
 }
 #addblog button:hover{
     transform: scale(1.2);
     transition: all .5s ease-in-out;
+}
+/*contact extra styling*/
+#addblog .social{
+    display: flex;
+    flex-direction: row;
+    gap:2rem;
+}
+#addblog .social img{
+    max-width: 2rem;
+    height: 2rem;
+    opacity:.4; 
+}
+#addblog .social img:hover{
+    opacity:10; 
 }
