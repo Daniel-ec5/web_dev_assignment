@@ -9,6 +9,10 @@ fieldset, form, label, legend, table,article, aside, figure, figcaption, footer,
     text-decoration: none;
     vertical-align: baseline;
 }
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, figcaption, figure,

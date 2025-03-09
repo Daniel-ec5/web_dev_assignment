@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Borel&family=Flavors&family=Funnel+Display:wght@300..800&family=Mogra&display=swap');@import url('https://fonts.googleapis.com/css2?family=Borel&family=Flavors&family=Mogra&display=swap');/*for the fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Flavors&family=Funnel+Display:wght@300..800&family=Mogra&display=swap');/*for the fonts*/
 :root{
     --back:#1C1C1E;
     --aside:#a0622c;/* for aside in grid layout*/
@@ -17,7 +17,7 @@ body {
     font-family: "Funnel", sans-serif;
     background-color: var(--text);
     color:var(--text);
-    
+    overflow: hidden;
 }
 li{
     list-style-type:none;
@@ -76,9 +76,9 @@ nav{
     max-height:100%;/*making sure it doesnt overflow*/
     max-width:100%;
     margin-top: 1rem;
+    font-family: "Mogra", sans-serif;
 
 }
-
 
 #about-me div{
     border: .1rem solid var(--main);
@@ -193,6 +193,13 @@ i{
     margin: 1.5rem;
     width: 80%;
 }
+#about-me button:hover, #about-me button a:hover{
+    color: var(--shadow);
+    background-color: var(--hover);
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+
+}
 
 #about-me footer {
     grid-row: span 2;
@@ -215,18 +222,83 @@ i{
     align-self: center;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
     margin-top: .5rem;
     max-width: 96vw;
     height:100%;
-    color:var(--back);
+    color:var(--text);
+    border-radius: .3rem;
+    
 }
-#portfolio div,#portfolio .footer{
+#portfolio section,#portfolio .footer{
     width: 98%;
     height: 100%;
-    background-color: white;
     padding: 1rem;
+    background-attachment:transparent;
     border-radius: 1rem;
 }
+#portfolio .projects, #portfolio .services{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin-top: .5rem;
+}
+#portfolio .services div,#portfolio .projects div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: .1rem solid var(--text);
+    border-radius: 1rem;
+    margin:1rem;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+#portfolio .services div:hover,#portfolio .projects div:hover{
+    background-color: var(--hover);
+    transition: all .4s ease-in-out;
+    color: var(--shadow);
+}
+#portfolio .container h2{
+    background-color: transparent;
+    color: var(--text);
+    font-family: "Mogra", cursive;
+    font-size: 2rem;
+    
+}
+#portfolio .container h3{
+    color: var(--main);
+    font-family: "Flavors", cursive;
+}
+#portfolio .container section p{
+    margin: .5rem;
+    display: none;
+    transition: hover .3s ease-in-out;
+}
+#portfolio section div:hover p{
+   display: block;
+   transform: scale(1.1);
+}
+#portfolio .container .projects,#portfolio .container .services{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height:100%;
+    padding: 1rem;
+    margin-top: .5rem;
+}
+#portfolio .container li{
+    border: .1rem solid var(--back);
+    border-radius: 1rem;
+    height:100%;
+}
+
 #portfolio .footer{
     width:98%;
     display:flex;
@@ -234,6 +306,8 @@ i{
     align-items:center;
     padding: 1rem;
     height:10%;
+    margin-top: 2rem;
+    font-size: 1rem;
 }
 #portfolio .footer .social{
     display: flex;
@@ -245,3 +319,4 @@ i{
 #portfolio .footer .social img{
     height:2rem;
 }
+    

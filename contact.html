@@ -6,47 +6,45 @@
     <title>Contact Daniel</title>
     <link rel="stylesheet" href="reset.css" />
 
-    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="about-me.css" />
   </head>
-  <body>
+  <body id="addblog">
     <header>
       <nav>
         <li><a href="index.html" id="logo">Daniel.EC</a></li>
         <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="about.html">About me</a></li>
         <li><a href="skills.html">Skills and Experience</a></li>
       </nav>
     </header>
-    <form action="process.php" method="POST">
-      <legend>Contact me</legend>
-      <fieldset>
-        <div>
-          <label for="name">Your Name</label>
-          <br />
-          <input type="text" id="name" placeholder="Enter your name" / required>
-        </div>
-        <div>
-          <label for="email"> Your Email </label>
-          <br />
-          <input type="email" id="email" placeholder="jane@gmail.com" /
-          required>
-        </div>
-        <div id="msg">
-          <label for="message">Your Message</label>
-          <br />
-          <textarea
-            cols="80"
-            rows="5"
-            placeholder="Enter your text here..."
-            id="message"
-            required
-          ></textarea>
-        </div>
-
-        <button>Send Message</button>
-        <button>Clear</button>
-      </fieldset>
-    </form>
+        <form >
+        <h2>Add Blog</h2>
+        <fieldset class="main">
+          <section>
+            <label for="name">Your Name</label>
+            <br />
+            <input type="text" placeholder="name" required />
+            <br />
+          </section>
+          <section>
+            <label for="content">Enter Message</label>
+            <br />
+            <textarea
+              name="content"
+              id="content"
+              cols="30"
+              rows="6"
+              placeholder="Content"
+              required
+            ></textarea>
+          </section>
+          <section class="button">
+            <button type="submit">Send Msg</button>
+            <button type="reset">Clear</button>
+          </section>
+        </form> 
+    <footer>
+      <p>&copy; 2025 Daniel.EC</p>
   </body>
 </html>
