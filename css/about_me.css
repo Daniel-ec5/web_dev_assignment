@@ -236,7 +236,7 @@ i{
 }
 
 #portfolio .container {
-    background-image: url(images/login.jpg);
+    background-image: url(../images/login.jpg);
     background-repeat: no-repeat; /* Prevents repetition */
     background-size:cover; /* Scales the image to cover the screen */
     display: flex;

@@ -94,7 +94,7 @@ div{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-image: url('images/image5.jpg');
+    background-image: url('../images/image5.jpg');
     background-repeat: no-repeat; /* Prevents repetition */
     background-size:cover; /* Scales the image to cover the screen */
     background-position:center;
@@ -185,10 +185,7 @@ div{
     grid-column: span 10;
     padding-top:2rem;
 }
-/*all for footer*/
-footer p{
-    font-size: 1rem;
-}
+
 /*PORTFOLIO */
  .container {
     display: flex;
@@ -279,68 +276,31 @@ footer p{
 
 /*Login page*/
 
-#login form{
-    padding: 1em; 
-    width:95vw;
-    height:100%;
-    margin: 1rem auto;
-    background-image: url(images/login.jpg);
-    background-repeat: no-repeat; /* Prevents repetition */
-    background-size:cover; /* Scales the image to cover the screen */
-
+#login{
+  height:100vh;
+  margin:0;
+background-image: url(../images/login.jpg);
+background-repeat: no-repeat; /* Prevents repetition */
+background-size:cover; /* Scales the image to cover the screen */
 }
-#login h2{
-    text-align: center;
-    font-size: 2rem;
-    color: var(--text2);
-    filter:contrast(1.5);
-    margin-top: 1rem;
+#login form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
-#login fieldset{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width:30%;
-    height:20%;
-    text-align: center;
-    justify-content: space-evenly;
-    border-radius: 1em;
-    margin: 4em auto;
-    border:#000000 solid .3em;
-    color:var(--text2);
-}
-fieldset:hover{
+form:hover{
     background-color: var(--hover);
-    transform: scale(1.4,1.6);
+    transform: scale(1.4);
     transition: all .5s ease-in-out;
     label{/* tried and it worked, didnt know i could nest styles*/
         color:#000000;
     }
 }
-#login section{
-    margin-bottom: 1rem;
-}
-#login button{
-    width:60%;
-    margin:.5rem;
-}
 
 #login input{
-    padding: .5em;
-    margin: .5em;
-    border-radius: .5em;
-    border: none;
     background-color: var(--back);
     color: var(--text2);
-}
-#login footer{
-    display: block;
-    padding: 1rem;
-    margin-top: 2rem;
-    text-align: center;
-    font-size: .7rem;
-    color:white;
-
 }
 /*add blog page*/
 #addblog form{
@@ -356,7 +316,7 @@ fieldset:hover{
 #addblog {
     height:100vh;
     margin: 1rem auto;
-    background-image: url(images/login.jpg);
+    background-image: url(../images/login.jpg);
     background-repeat: no-repeat; /* Prevents repetition */
     background-size:cover; /* Scales the image to cover the screen */
 }
@@ -429,4 +389,8 @@ fieldset:hover{
 }
 #addblog .social img:hover{
     opacity:10; 
+}
+/*all for footer*/
+footer p{
+    font-size: 1rem;
 }

@@ -13,6 +13,11 @@ html{
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, figcaption, figure,
