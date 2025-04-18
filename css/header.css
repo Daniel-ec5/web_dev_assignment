@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: "Mogra", sans-serif;
+  font-family: "Funnel", sans-serif;
   margin: 0;
   padding: 0;
   color: var(--text);
@@ -24,7 +24,8 @@ nav {
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: var(--main);
-  width: 100vw;
+  min-width: 95vw;
+  max-width:100vw;
 }
 
 li {
@@ -80,4 +81,8 @@ a:hover {
   color: var(--text);
 }
 
-
+/* display will only be reset when scrren size is small, in the mobile.css */
+/* @media only screen and (max-width: 768px) { */
+ .dropdown, .dropdown-content,.dropdown btn ,#logo-list{
+        display: none;  
+    }

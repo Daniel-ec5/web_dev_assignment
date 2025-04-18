@@ -1,23 +1,22 @@
-<?php 
-$servername="127.0.0.1";
-$username="root";
-$password="";
-$dbname="ecs417";
-$conn=new mysqli($servername,$username,$password,$dbname);
+<?php
+$servername = "127.0.0.1";
+$username = "root";
+$password = "";
+$dbname = "ecs417";
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Could not connect to ecs417: " . $conn->connect_error);
 }
-if($_SERVER["REQUEST_METHOD"]=="POST"){
-    $title=$conn->real_escape_string($_POST["title"]);
-    $content=$conn->real_escape_string($_POST["content"]);
-    $sql="INSERT INTO portfolio_post (title,content) VALUES ('$title','$content')";
-    if($conn->query($sql)===TRUE){
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $title = $conn->real_escape_string($_POST["title"]);
+    $content = $conn->real_escape_string($_POST["content"]);
+    $sql = "INSERT INTO portfolio_post (title,content) VALUES ('$title','$content')";
+    if ($conn->query($sql) === TRUE) {
         echo '<script>alert("Post added Successfully");</script>';
-         header("Location:viewblog.php");
-    }
-    else{
-        echo('<script>alert("Post not added");</script>');
+        header("Location:viewblog.php");
+    } else {
+        echo ('<script>alert("Post not added");</script>');
     }
 
 }
@@ -33,6 +32,7 @@ $conn->close();
     <title>Add blog</title>
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
     <script src="../js/addblog.js" defer></script>
 </head>
 
@@ -44,7 +44,9 @@ $conn->close();
             <li><a href="viewblog.php">Blog</a></li>
             <li><a href="../html/about.html">About me</a></li>
             <li><a href="../html/skills.html">Skills and Experience</a></li>
+            <li><a href="logout.php">logout</a></li>
         </nav>
+        <li id="logo-list"><a href="index.php" id="logo1"><span style="color: crimson">D</span>aniel.EC</a></li>
     </header>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
         <h2>Add Blog</h2>

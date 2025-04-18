@@ -10,14 +10,20 @@
     --hover:#d1ba8f;
     --shadow:#000000;
 }
-body {
 
+ 
+/* display will only be reset when scrren size is small, in the mobile.css */
+/* @media only screen and (max-width: 768px) { */
+ .dropdown, .dropdown-content,.dropdown btn,#logo-list {
+        display: none;  
+    }
+
+body {
     font-size: 1.3rem;
     font-weight: 400;
     font-family: "Funnel", sans-serif;
     background-color: var(--text);
     color:var(--text);
-    overflow: hidden;
 }
 li{
     list-style-type:none;

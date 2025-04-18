@@ -1,7 +1,12 @@
 const clear=document.getElementById("clearpost");
 clear.addEventListener("click",function(){
-   document.getElementById("content").value="";
-   document.getElementById("title").value="";
+   if(confirm("Are you sure you want to clear the form?")){
+      document.getElementById("content").value="";
+      document.getElementById("title").value="";
+   }
+   else{
+      //do nothing
+   }
 });
 const post=document.getElementById("post");
 post.addEventListener("click",function(event){

@@ -39,7 +39,7 @@ nav{
     justify-content: space-evenly;
     background-color:var(--main);
     max-height:100%;
-    width:100%;
+    max-width:100%;
     border-radius: .3rem;
     font-family: "Mogra", sans-serif;
 
@@ -144,7 +144,7 @@ section{
         width: 90%;
       }
 .javascript .skill-fill {
-        width: 25%;
+        width: 80%;
       }
 .python .skill-fill {
         width: 25%;
@@ -158,6 +158,9 @@ section{
 .assembly .skill-fill {
         width: 60%;
     }
+.PHP .skill-fill {
+        width: 90%;
+      }
 #exp{
     display: flex;
     flex-direction: column;
@@ -180,3 +183,10 @@ section{
     transform: scale(1.3,1.4);
     border:.2rem dotted white;
 }
+/* display will only be reset when scrren size is small, in the mobile.css */
+/* @media only screen and (max-width: 768px) { */
+ .dropdown, .dropdown-content,.dropdown btn,#logo-list {
+        display: none;  /* Hide dropdown by default */
+      display: none;  /* Hide dropdown by default */
+    }
+
