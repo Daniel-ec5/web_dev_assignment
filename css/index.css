@@ -145,7 +145,7 @@ div{
 #index .btn{
     padding: 1rem;
     grid-column: span 10;
-    grid-row: span 1;
+    grid-row: span 3;
     justify-items: center;
 }
 #index .btn  a:hover{
