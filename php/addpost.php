@@ -1,35 +1,10 @@
-<?php
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "ecs417";
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Could not connect to ecs417: " . $conn->connect_error);
-}
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $title = $conn->real_escape_string($_POST["title"]);
-    $content = $conn->real_escape_string($_POST["content"]);
-    $sql = "INSERT INTO portfolio_post (title,content) VALUES ('$title','$content')";
-    if ($conn->query($sql) === TRUE) {
-        echo '<script>alert("Post added Successfully");</script>';
-        header("Location:viewblog.php");
-    } else {
-        echo ('<script>alert("Post not added");</script>');
-    }
-
-}
-
-$conn->close();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add blog</title>
+    <title>Add Post</title>
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/mobile.css" />
@@ -48,8 +23,8 @@ $conn->close();
         </nav>
         <li id="logo-list"><a href="index.php" id="logo1"><span style="color: crimson">D</span>aniel.EC</a></li>
     </header>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-        <h2>Add Blog</h2>
+    <form action="addEntry.php" method="POST">
+        <h2>Add New Post</h2>
         <fieldset class="main">
             <section>
                 <label for="title">Enter Title</label>

@@ -124,7 +124,7 @@
     font-size:2rem;
     text-decoration: none;
   }
-  #form:hover,#login-form:hover{
+  #form:hover,#login-form:hover,#form .main:hover{
     transform: none !important;
   }
   .social img{
